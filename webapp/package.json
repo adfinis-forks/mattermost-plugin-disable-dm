@@ -1,0 +1,28 @@
+{
+  "name": "dsable-dm",
+  "license": "Apache-2.0",
+  "main": "src/index.jsx",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "lint": "eslint --ignore-pattern node_modules --ignore-pattern dist --ext .js --ext .jsx . --quiet",
+    "fix": "eslint --ignore-pattern node_modules --ignore-pattern dist --ext .js --ext .jsx . --quiet --fix"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.6",
+    "eslint": "^5.16.0",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-react": "^7.13.0",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "mattermost-redux": "^1.2.0",
+    "react": "^16.8.6",
+    "reselect": "4.0.0"
+  }
+}
