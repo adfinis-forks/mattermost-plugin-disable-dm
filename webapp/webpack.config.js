@@ -1,14 +1,9 @@
 var path = require('path');
 
 module.exports = {
-    entry: [
-        './src/index.jsx',
-    ],
+    entry: ['./src/index.jsx'],
     resolve: {
-        modules: [
-            'src',
-            'node_modules',
-        ],
+        modules: ['src', 'node_modules'],
         extensions: ['*', '.js', '.jsx'],
     },
     module: {
@@ -19,7 +14,9 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-react',
+                        plugins: ['@babel/plugin-proposal-class-properties'],
+                        presets: [
+                            '@babel/preset-react',
                             [
                                 '@babel/preset-env',
                                 {
@@ -37,6 +34,9 @@ module.exports = {
     },
     externals: {
         react: 'React',
+        redux: 'Redux',
+        'react-redux': 'ReactRedux',
+        'prop-types': 'PropTypes',
     },
     output: {
         path: path.join(__dirname, '/dist'),

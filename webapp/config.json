@@ -1,0 +1,4 @@
+{
+    "hiddenElements": ["#directChannel .add-channel-btn", "#moreDirectMessage"],
+    "allowedDomains": []
+}
